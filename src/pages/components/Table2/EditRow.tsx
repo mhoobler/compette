@@ -76,7 +76,7 @@ const EditRow: React.FC<Props> = (P) => {
         onClick={handleSubmit}
         disabled={isSame()}
         />
-        <Button
+        {/* <Button
         className='fa fa-undo'
         variant={double ? 'super-danger' : 'danger'}
         onClick={() => {
@@ -85,7 +85,7 @@ const EditRow: React.FC<Props> = (P) => {
           setTimer();
         }}
         disabled={isSame()}
-        />
+        /> */}
         <DeleteButton
         type='item'
         value={[P.catName, P.item.key]}
