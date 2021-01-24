@@ -16,6 +16,14 @@ const AddOneRow: React.FC<Props> = (P) => {
 
   const [item, setItem] = useState({});
 
+  let sorted = [...P.attrs].sort( (a, b) => {
+    if(a.priority < b.priority){
+      return -1
+    } else {
+      return 1
+    }
+  });
+
   const handleSubmit = () => {
     console.log(item)
     let uid = firebase.auth().currentUser?.uid;
@@ -38,11 +46,12 @@ const AddOneRow: React.FC<Props> = (P) => {
         onClick={handleSubmit}
         />
       </td>
-      {P.attrs.map( (e: ClientAttr, i:number) => {
+      {sorted.map( (e: ClientAttr, i:number) => {
         return (
           <td key={i}>
             <Form.Control
             type={e.type}
+            maxLength={12}
             onChange={ (evt) => {
               setItem({
                 ...item,

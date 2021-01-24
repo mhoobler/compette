@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import {Col} from 'react-bootstrap';
 
 import CellInput from './CellInput';
 import Cell from './Cell';

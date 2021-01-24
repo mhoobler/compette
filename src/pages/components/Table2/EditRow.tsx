@@ -1,6 +1,8 @@
 import React, {useState, useRef} from 'react';
 import {Button, Form} from 'react-bootstrap';
 
+import DeleteButton from './DeleteButton';
+
 import firebase from 'firebase';
 
 type Props = {
@@ -84,6 +86,10 @@ const EditRow: React.FC<Props> = (P) => {
         }}
         disabled={isSame()}
         />
+        <DeleteButton
+        type='item'
+        value={[P.catName, P.item.key]}
+        />
       </td>
       {sorted.map( (e: ClientAttr, i: number) => {
         return (
@@ -91,6 +97,7 @@ const EditRow: React.FC<Props> = (P) => {
             <Form.Control
             type={e.type}
             defaultValue={item[e.name]}
+            maxLength={12}
             value={item[e.name]}
             onChange={(evt) => {
               let {value} = evt.currentTarget;

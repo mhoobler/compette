@@ -8,8 +8,6 @@ import {
 
 import {TableContext} from '../Tables2/TableContext';
 
-import firebase from 'firebase';
-
 const PageHead: React.FC = () => {
   const [newCategory, setNewCategory] = useState('');
   const {search, handleSearch, submitNewCategory} = React.useContext(TableContext) as ContextType;
@@ -46,7 +44,6 @@ const PageHead: React.FC = () => {
             <Button
             className="fa fa-search camo-disable"
             variant='primary'
-            disabled={true}
             >
               &nbsp;Search
             </Button>

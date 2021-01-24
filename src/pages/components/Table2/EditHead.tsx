@@ -100,7 +100,7 @@ const EditHead: React.FC<Props> = (P) => {
           </Form.Control>
           <Form.Control
           type='text'
-          value={newAttr.name}
+          value={newAttr.name.replace(/[^\w]/, '')}
           onChange={(evt) => setNewAttr({
             ...newAttr,
             name: evt.currentTarget.value

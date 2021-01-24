@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import {
   Table as BStable,
@@ -7,13 +7,10 @@ import {
 } from 'react-bootstrap';
 
 import EditButton from './EditButton';
-import DeleteButton from './DeleteButton';
 import AddOneRow from './AddOneRow';
 
 import TableHead from './TableHead';
 import TableRow from './TableRow';
-
-import firebase from 'firebase';
 
 type Props = {
   clientCat: ClientCat
@@ -38,7 +35,7 @@ const Table: React.FC<Props> = (P) => {
               active={false}
               />
             </span>
-            {P.clientCat.name}: {P.edit.toString()}
+            {P.clientCat.name}
           </h3>
 
         </Col>

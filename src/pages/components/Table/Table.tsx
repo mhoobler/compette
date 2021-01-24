@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Table as BSTable,
   Button,
@@ -14,7 +14,6 @@ import Head from './TableHead';
 import DisplayRow from './Row';
 
 import firebase from 'firebase';
-import { EnumType } from 'typescript';
 
 enum typeEnum {
   Text = 'text',
