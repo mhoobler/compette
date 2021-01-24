@@ -8,15 +8,13 @@ import {
 
 import Login from './pages/login/Login';
 import Nav from './pages/components/Nav/NavContainer';
-import TablesPage from './pages/Tables';
+
 import TimesPage from './pages/Times';
 //Refactor
 import Tables2Page from './pages/Tables2';
 import TableProvider from './pages/Tables2/TableContext';
 //Testing components
-import Rename from './pages/testingUtils/rename';
-import UpdateTest from './pages/testingUtils/UpdateTest';
-import SimpleRegex from './pages/testingUtils/SimpleRegex';
+
 
 //CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,16 +27,6 @@ import 'firebase/auth';
 import 'firebase/database';
 import { FirebaseAuthConsumer, FirebaseAuthProvider } from '@react-firebase/auth';
 import { FirebaseDatabaseProvider } from '@react-firebase/database';
-
-const obj1 = {
-  test: 'string',
-  attr: ['one', 'two']
-}
-
-const obj2 = {
-  test: 'string',
-  attr: ['one', 'two']
-}
 
 const App: React.FC = () => {
 

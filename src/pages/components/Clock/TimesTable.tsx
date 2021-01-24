@@ -1,8 +1,5 @@
 import React, {useState} from 'react';
 import {
-  Table,
-  Row,
-  Col,
   Button,
   Form
 } from 'react-bootstrap';

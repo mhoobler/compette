@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Form, Button, Row, Col, ButtonGroup } from 'react-bootstrap';
+import { Button, Row, Col} from 'react-bootstrap';
 
 import Table from '../components/Table/Table';
 import PageHead from './PageHead';
@@ -7,8 +7,6 @@ import PageHead from './PageHead';
 import firebase from 'firebase';
 import { FirebaseDatabaseNode } from '@react-firebase/database';
 import TableEdit from '../components/Table/TableEdit';
-
-const sel: string | undefined = undefined;
 
 const DisplayTables: React.FC = () => {
 
