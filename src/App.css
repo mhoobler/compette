@@ -1,0 +1,186 @@
+body {
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+h3{
+  margin: 0;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  height: 72px;
+}
+
+nav > ul * {
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+}
+
+li {
+  padding: 8px 8px;
+  transition: padding 500ms;
+}
+
+li:hover {
+  padding: 16px 8px;
+  transition: padding 500ms;
+}
+
+a {
+  color: white;
+  transition: color 500ms;
+}
+
+a:hover {
+  color: #aaf;
+  transition: color 500ms;
+} 
+
+@keyframes swell {
+  from {
+    padding: 8px;
+  }
+  to {
+    padding: 16px;
+  }
+}
+
+.tree-list {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tree-list-item:before {
+  content: attr(data-attribute);
+  font-size: 26px;
+}
+
+#table-page {
+  margin: 0 12px;
+}
+
+.add-button {
+  width: 10vw;
+}
+
+.row-show-false {
+  display: none;
+}
+
+.table-label {
+  border-bottom: 3px solid #44aaFF;
+  margin: 10px 0px;
+}
+
+.table-label > .col-lg-1 {
+  padding: .3rem;
+  width: 10%;
+  max-width: 10%;
+  flex: 0 0 10%;
+  text-align: center;
+}
+
+.table-label > .col-lg-11 {
+  padding: .3rem;
+  width: 10%;
+  max-width: 10%;
+  flex: 0 0 10%;
+  text-align: center;
+}
+
+.table-label > div > h3 {
+  line-height: 2;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.tabel-edit-row {
+  margin-left: 0px;
+  margin-right: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.table-cell {
+  max-width: 300px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-flat {
+  margin: 10px 0px;
+}
+
+.jumbotron {
+  color: black;
+}
+
+.camo-disable:disabled {
+  opacity: 100%;
+}
+
+.table-input-cell input[type='number'] {
+  opacity: .65;
+  max-width: 6rem;
+}
+
+.table-input-cell input {
+  opacity: .65;
+  max-width: 24rem;
+}
+.table-input-cell input:focus {
+  opacity: 1;
+}
+
+tr > td{
+  font-size: 20px;
+}
+
+.table {
+  width: auto;
+}
+
+.co-lg-4 > .row {
+  height: auto;
+}
+
+.header-row .btn-group {
+  width: 100%;
+}
+.header-row .btn-group > button{
+  max-width: 50%;
+  min-width: 148px;
+}
+.header-row .btn-group > input {
+  width: 60%;
+}
+
+.btn-super-danger{
+  background-color: #F00;
+}
+
+.subtle-input {
+  border: none;
+  background-color: inherit;
+  color: white;
+  max-width: 24rem;
+}
+.subtle-input[type='number'] {
+  width: 6rem;
+}
