@@ -16,7 +16,8 @@ const Tables2Page: React.FC = () => {
         {clientCats.map( (e: ClientCat) => {
           if(editCat !== null && editCat.name === e.name){
             return (
-              <EditTable 
+              <EditTable
+              key={e.name}
               uid={userID}
               catName={e.name}
               />

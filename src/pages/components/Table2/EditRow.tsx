@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import {Button, Form} from 'react-bootstrap';
 
 import DeleteButton from './DeleteButton';
@@ -13,11 +13,9 @@ type Props = {
 
 const EditRow: React.FC<Props> = (P) => {
 
-  const [item, setItem] = useState(P.item);
-  const [double, setDouble] = useState(false);
-  const timerRef = useRef<any>(null);
+  const [item, setItem] = useState({...P.item});
 
-  let isSame = () => { return P.item === item };
+  let isSame = () => { return JSON.stringify(P.item) === JSON.stringify(item) };
 
   let sorted = [...P.attrs].sort( (a, b) => {
     if(a.priority < b.priority){
@@ -26,17 +24,6 @@ const EditRow: React.FC<Props> = (P) => {
       return 1
     }
   });
-
-  const setTimer = () => {
-    timerRef.current = 
-    setTimeout( () => {
-      setDouble(false);
-    }, 750)
-  }
-
-  // useEffect( () => {
-  //   setItem(P.item);
-  // }, [item])
 
   const handleSubmit = () => {
     const uid = firebase.auth().currentUser?.uid;
@@ -61,12 +48,6 @@ const EditRow: React.FC<Props> = (P) => {
     })
   }
 
-  const reset = () => {
-    if(double){
-      setItem(P.item)
-    }
-  }
-
   return (
     <tr>
       <td>
@@ -76,16 +57,6 @@ const EditRow: React.FC<Props> = (P) => {
         onClick={handleSubmit}
         disabled={isSame()}
         />
-        {/* <Button
-        className='fa fa-undo'
-        variant={double ? 'super-danger' : 'danger'}
-        onClick={() => {
-          reset();
-          setDouble(true);
-          setTimer();
-        }}
-        disabled={isSame()}
-        /> */}
         <DeleteButton
         type='item'
         value={[P.catName, P.item.key]}
@@ -96,7 +67,6 @@ const EditRow: React.FC<Props> = (P) => {
           <td key={i}>
             <Form.Control
             type={e.type}
-            defaultValue={item[e.name]}
             maxLength={12}
             value={item[e.name]}
             onChange={(evt) => {

@@ -44,7 +44,8 @@ interface Category {
 
 interface Attribute {
     priority: number,
-    type: text
+    type: text,
+    default: string | number
 }
 
 type ClientCat = {
@@ -57,4 +58,5 @@ type ClientAttr = {
   name: string
   priority: number
   type: string
+  default: string | number
 }

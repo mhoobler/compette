@@ -1,8 +1,14 @@
 import React from 'react';
+import {
+  Row,
+  Col,
+  Button
+} from 'react-bootstrap';
+
 
 import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
+
+import './login.css';
 
 const Login: React.FC = () => {
 
@@ -27,19 +33,38 @@ const Login: React.FC = () => {
   }
 
   return (
-    <div>
-      <h3>Login</h3>
+    <div id='login-page'>
+      <Row className='justify-content-center'>
+        <Col className='text-center title-container' lg='4'>
+          <h1>Compe<span className='fa fa-table'/>e</h1>
+          <p>A one stop shop for personal productivity</p>
+        </Col>
+      </Row>
 
-      <form>
-        <button
-        onClick={(e) => handleSubmit(e)}
-        value={'Google'}
-        >Google</button>
-        <button
-        onClick={(e) => handleSubmit(e)}
-        value={'Anonymous'}
-        >Anonymous</button>
-      </form>
+      <Row className='justify-content-center'>
+
+        <Col className='text-center' lg='2'>
+          <ul>
+            <li>
+              <Button
+              onClick={(e) => handleSubmit(e)}
+              value={'Google'}
+              >
+                Sign In
+              </Button>
+            </li>
+            <li>
+              <Button
+              onClick={(e) => handleSubmit(e)}
+              value={'Anonymous'}
+              >
+                Try it out!
+              </Button>
+            </li>
+          </ul>
+        </Col>
+
+      </Row>
     </div>
   )
 }

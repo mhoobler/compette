@@ -51,7 +51,7 @@ window.env = {
   "npm_package_scripts_start": "react-dotenv && react-scripts start",
   "npm_config_ignore_scripts": "",
   "npm_package_browserslist_development_0": "last 1 chrome version",
-  "PATH": "/tmp/yarn--1611457681724-0.7147621783109324:/home/michael/Dev/HOMEWORK/scavshop/client/node_modules/.bin:/home/michael/.config/yarn/link/node_modules/.bin:/home/michael/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/michael/anaconda3/bin:/home/michael/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+  "PATH": "/tmp/yarn--1611601472972-0.6002907403153543:/home/michael/Dev/HOMEWORK/scavshop/client/node_modules/.bin:/home/michael/.config/yarn/link/node_modules/.bin:/home/michael/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/michael/anaconda3/bin:/home/michael/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
   "NODE": "/usr/bin/node",
   "SESSION_MANAGER": "local/Studio:@/tmp/.ICE-unix/2583,unix/Studio:/tmp/.ICE-unix/2583",
   "GDM_LANG": "en_US",

@@ -69,11 +69,13 @@ const TableProvider: React.FC = ({children}) => {
       //get Category Attributes
         let attrs = Object.keys(val[catName].attributes).map( attrName => {
           let cattr = val[catName].attributes;
-          // console.log(cattr);
+          let def = cattr[attrName].default ? cattr[attrName].default : "''";
+          console.log(def);
           return {
             name: attrName,
             priority: cattr[attrName].priority,
-            type: cattr[attrName].type
+            type: cattr[attrName].type,
+            default: def
           }
         });
 
@@ -95,7 +97,7 @@ const TableProvider: React.FC = ({children}) => {
           items: items
         };
         
-        // console.log(cat);
+        console.log(cat);
         return cat 
       })
     

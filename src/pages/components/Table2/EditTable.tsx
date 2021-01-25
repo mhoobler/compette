@@ -42,7 +42,8 @@ const EditTable: React.FC<Props> = (P) => {
           return {
             name: attrName,
             priority: cattr[attrName].priority,
-            type: cattr[attrName].type
+            type: cattr[attrName].type,
+            default: cattr[attrName].default
           }
         });
 
@@ -67,7 +68,7 @@ const EditTable: React.FC<Props> = (P) => {
         
       }
     })
-  }, [])
+  }, [P.catName])
 
   return(
     

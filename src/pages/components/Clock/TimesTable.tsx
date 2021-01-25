@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   Button,
   Form
@@ -60,8 +60,6 @@ const testObj = {
 }
 
 const TimesTable: React.FC<Props> = (P) => {
-
-  const [from, setFrom] = useState('');
 
   let keys = Object.keys(P.timeData);
   // console.log(asdf);

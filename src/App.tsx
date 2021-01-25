@@ -28,6 +28,7 @@ import 'firebase/database';
 import { FirebaseAuthConsumer, FirebaseAuthProvider } from '@react-firebase/auth';
 import { FirebaseDatabaseProvider } from '@react-firebase/database';
 
+
 const App: React.FC = () => {
 
   const [isAuthed, setAuthed] = useState(false);
